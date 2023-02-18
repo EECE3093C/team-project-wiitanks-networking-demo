@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/host-btn.gd" type="Script" id=1]
+[ext_resource path="res://scripts/join-btn.gd" type="Script" id=2]
+[ext_resource path="res://scripts/connecting-bg.gd" type="Script" id=3]
 
 [node name="Lobby" type="Control"]
 anchor_right = 1.0
@@ -28,6 +30,7 @@ margin_top = 297.0
 margin_right = 600.0
 margin_bottom = 360.0
 text = "Join"
+script = ExtResource( 2 )
 
 [node name="ip-enter-field" type="LineEdit" parent="join-btn"]
 margin_left = -2.0
@@ -48,6 +51,7 @@ visible = false
 margin_right = 1021.0
 margin_bottom = 609.0
 color = Color( 0.0901961, 0.105882, 0.227451, 1 )
+script = ExtResource( 3 )
 
 [node name="connecting-text" type="Label" parent="connecting-bg"]
 margin_left = 468.0
