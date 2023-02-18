@@ -1,17 +1,20 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/host-btn.gd" type="Script" id=1]
 
 [node name="Lobby" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Host" type="Button" parent="."]
+[node name="host-btn" type="Button" parent="."]
 margin_left = 376.0
 margin_top = 74.0
 margin_right = 602.0
 margin_bottom = 130.0
 text = "Host"
+script = ExtResource( 1 )
 
-[node name="Host IP Label" type="Label" parent="Host"]
+[node name="host-ip-label" type="Label" parent="host-btn"]
 margin_left = -2.0
 margin_top = -18.0
 margin_right = 228.0
@@ -19,36 +22,38 @@ margin_bottom = -4.0
 text = "IP: <private ip here>"
 align = 1
 
-[node name="Join" type="Button" parent="."]
+[node name="join-btn" type="Button" parent="."]
 margin_left = 373.0
 margin_top = 297.0
 margin_right = 600.0
 margin_bottom = 360.0
 text = "Join"
 
-[node name="IP Enter LineEdit" type="LineEdit" parent="Join"]
+[node name="ip-enter-field" type="LineEdit" parent="join-btn"]
 margin_left = -2.0
 margin_top = 68.0
 margin_right = 228.0
 margin_bottom = 92.0
 text = "Enter Host's IP Address"
 
-[node name="Invalid Address Warn" type="Label" parent="Join"]
+[node name="invalid-ip-warn" type="Label" parent="join-btn"]
 margin_left = -2.0
 margin_top = 96.0
 margin_right = 227.0
 margin_bottom = 115.0
 text = "Invalid Address..."
 
-[node name="ConnectingBG" type="ColorRect" parent="."]
+[node name="connecting-bg" type="ColorRect" parent="."]
 visible = false
 margin_right = 1021.0
 margin_bottom = 609.0
 color = Color( 0.0901961, 0.105882, 0.227451, 1 )
 
-[node name="ConnectingText" type="Label" parent="ConnectingBG"]
+[node name="connecting-text" type="Label" parent="connecting-bg"]
 margin_left = 468.0
 margin_top = 288.0
 margin_right = 555.0
 margin_bottom = 302.0
 text = "Connecting...."
+
+[connection signal="pressed" from="host-btn" to="host-btn" method="host"]
