@@ -64,3 +64,4 @@ text = "Connecting...."
 
 [connection signal="pressed" from="host-btn" to="host-btn" method="host"]
 [connection signal="set_connect_type" from="host-btn" to="connecting-bg" method="set_connect_type"]
+[connection signal="set_connect_type" from="join-btn" to="connecting-bg" method="set_connect_type"]
