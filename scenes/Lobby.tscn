@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/host-btn.gd" type="Script" id=1]
 [ext_resource path="res://scripts/join-btn.gd" type="Script" id=2]
 [ext_resource path="res://scripts/connecting-bg.gd" type="Script" id=3]
+[ext_resource path="res://scripts/lobby.gd" type="Script" id=4]
 
 [node name="Lobby" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
 
 [node name="host-btn" type="Button" parent="."]
 margin_left = 376.0
@@ -61,3 +63,4 @@ margin_bottom = 302.0
 text = "Connecting...."
 
 [connection signal="pressed" from="host-btn" to="host-btn" method="host"]
+[connection signal="set_connect_type" from="host-btn" to="connecting-bg" method="set_connect_type"]

@@ -4,6 +4,8 @@ const HOST_CONNECT_TEXT = "Waiting for Players..."
 const CLIENT_CONNECT_TEXT = "Connecting to Server..."
 onready var loading_text = get_node("connecting-text")
 
+# wire this to the host and join buttons. set the text of the loading
+# screen to match the situation.
 func set_connect_type(asHost):
 	show()
 	if asHost:
