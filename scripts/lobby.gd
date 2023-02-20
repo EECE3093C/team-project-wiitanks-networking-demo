@@ -10,3 +10,4 @@ func connect_callback():
 
 remote func begin_game():
 	get_tree().change_scene("res://scenes/Game.tscn")
+
