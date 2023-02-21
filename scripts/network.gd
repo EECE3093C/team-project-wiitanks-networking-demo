@@ -32,4 +32,4 @@ func initialize_client(server_ip):
 # run this only after all other instances you want to find are on the network
 func set_ids():
 	network_id = get_tree().get_network_unique_id()
-	peer_ids = get_tree	().get_network_unique_peers()
+	peer_ids = get_tree().get_network_unique_peers()
