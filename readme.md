@@ -22,15 +22,17 @@ flowchart LR
 ```mermaid
 flowchart TD
     Begin --> host-btn.gd
+
     subgraph Lobby.tscn
     host-btn.gd --> Lobby.gd
-    id1(User Clicks Host) -->|Method Connection| join-btn.join
-    join-btn.join --> join-btn.client-connect 
-    join-btn.client-connect -.->|Signal| connecting-bg.gd
+    id1(User Clicks Host) -.->|Method Connection| host-btn.host
+    host-btn.host --> network.initialize_server
+    host-btn.host --> host-btn.client-connect 
+    host-btn.client-connect -.->|Signal| connecting-bg.gd
 
+    lobby.connect_callback --> begin_game
+    lobby.connect_callback -.-> clients_begin_game
 
     end
-
-
 
 ```
