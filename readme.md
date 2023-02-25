@@ -19,10 +19,8 @@ flowchart LR
 
 ## Lobby.tscn
 
-```mermaid
-flowchart LR
-    
-    
+```mermaid 
+flowchart
     subgraph Lobby.tscn
         
         direction TB
@@ -42,7 +40,12 @@ flowchart LR
         lobby.connect_callback -.->|rpc call| id2[begin_game of clients]
 
     end
+```
 
+## Game.tscn
+
+```mermaid
+flowchart 
     subgraph Game.tscn
 
         direction TB
@@ -54,5 +57,3 @@ flowchart LR
     end
 
 ```
-
-## Game.tscn
